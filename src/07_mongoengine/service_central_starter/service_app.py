@@ -1,5 +1,8 @@
+import nosql.mongo_setup as mongo_setup
+
 def main():
     print_header()
+    config_mongo()
     user_loop()
 
 
@@ -12,6 +15,8 @@ def print_header():
     print('----------------------------------------------')
     print()
 
+def config_mongo():
+    mongo_setup.global_init()
 
 def user_loop():
     while True:
